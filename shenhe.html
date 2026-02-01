@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const app = document.getElementById("app"); //审核内容容器
+        const token = "46146f1e7ef8e3f3ed011f9f2dc29d90";
+        const apiUrl = `https://pwa-api.kkpwa.com/cloak.Platform/verify?token=${token}`; //接口地址
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 5000); //5秒超时
+          const response = await fetch(apiUrl, {
+            signal: controller.signal,
+          });
+          clearTimeout(timeoutId);
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          const { data } = await response.json();
+          console.log(data);
+          if (data === 2) {
+            //接口返回结果等于2代表是正常客户，在此转到真实页面的入口文件（如：index.php或者index.html等）
+            window.location.replace("gram.html");
+          } else {
+            //接口返回结果不等于2,将审核内容容器改为显示，对非正常客户展示审核页的内容
+            app.style.display = "block";
+          }
+        } catch (error) {
+          console.error("请求失败:", error);
+          app.style.display = "block";
+        }
+      });
+    </script>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      #app {
+        width: 100vw;
+        height: 100vh;
+      }
+      #app iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" style="display: none">
+      <!--想使用哪个审核页就放开哪行的注释，并注释掉其他行-->
+      <!--游戏-->
+      <!--<iframe src="youxi.html"></iframe>
+      <!--商城-->
+      <iframe src="index.html"></iframe>
+      <!--工具-->
+      <!--<iframe src="gongju.html"></iframe>
+      -->
+      <!--金融-->
+      <!--<iframe src="jinrong.html"></iframe>-->
+      <!--短剧-->
+      <!--<iframe src="duanju.html"></iframe>-->
+      <!--企业站-->
+      <!--<iframe src="qiyezhan.html"></iframe>-->
+    </div>
+  </body>
+</html>
