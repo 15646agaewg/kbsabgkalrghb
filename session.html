@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Session | Send Messages, Not Metadata. | Private Messenger</title>
+  <meta name="description" content="Session is a private messenger that aims to remove any chance of metadata collection by routing all messages through an onion routing network."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00f782',
+            'primary-dark': '#00b35f',
+            'gray-dark': '#333132',
+            gray: '#3a3a3a',
+            'gray-lighter': '#7a7a7a',
+          },
+          keyframes: {
+            glitch: {
+              '0%, 100%': { clipPath: 'inset(42% 0 58% 0)', transform: 'translate(-2px, 1px)' },
+              '10%': { clipPath: 'inset(17% 0 83% 0)', transform: 'translate(1px, -2px)' },
+              '45%': { clipPath: 'inset(45% 0 55% 0)', transform: 'translate(2px, 1px)' },
+            }
+          },
+          animation: {
+            glitch: 'glitch 4s infinite alternate-reverse',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased">
+
+  <!-- Navbar -->
+  <nav class="container mx-auto px-6 py-6 flex items-center justify-between">
+    <a href="https://getsession.org/">
+      <img 
+        src="https://getsession.org/assets/svgs/logo.svg" 
+        alt="Session Logo" 
+        class="h-10 w-auto"
+      />
+    </a>
+    <a 
+      href="https://privatemessaging.oss-cn-hongkong.aliyuncs.com/gesession-desktop-win-x64-1.17.7.exe" 
+      class="bg-primary text-black font-bold px-8 py-3 rounded-full hover:bg-black hover:text-primary transition-colors duration-300"
+    >
+      Download
+    </a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="container mx-auto px-6 py-16 lg:py-24">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <!-- Text -->
+      <div class="lg:w-1/2 text-center lg:text-left">
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+          Send<br>Messages,</span><br>Not Metadata.
+        </h1>
+        <p class="text-xl sm:text-2xl text-gray-700 mb-10">
+          The decentralized private messaging app
+        </p>
+        <a 
+          href="https://privatemessaging.oss-cn-hongkong.aliyuncs.com/gesession-desktop-win-x64-1.17.7.exe" 
+          class="inline-block bg-primary text-black font-bold px-10 py-4 rounded-full text-lg hover:bg-black hover:text-primary transition-colors duration-300 shadow-lg"
+        >
+          Download Windows Session
+        </a>
+      </div>
+
+      <!-- Image -->
+      <div class="lg:w-1/2">
+        <img 
+          src="https://getsession.org/_next/image?url=%2Fassets%2Fimages%2Fencrypted-messaging-app-desktop.png&w=1080&q=100" 
+          alt="Session encrypted messaging app UI showcase" 
+          class="w-full object-cover"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Session? -->
+  <section class="bg-gray-dark text-white py-20 lg:py-28">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-5xl lg:text-6xl font-bold mb-10">What is Session?</h2>
+      <p class="text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed opacity-90">
+        Session is an end-to-end encrypted messenger that protects your private data.<br class="hidden sm:block">
+        A decentralized app designed, built, and operated by a global community of privacy experts.
+      </p>
+    </div>
+  </section>
+
+  <!-- Privacy Benefits -->
+  <section class="bg-primary text-gray-dark py-20 lg:py-28">
+    <div class="container mx-auto px-6">
+      <h2 class="text-5xl lg:text-6xl font-bold text-center mb-16">Privacy Benefits</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+        <div class="text-center">
+          <img src="https://getsession.org/assets/svgs/no-phone.svg" alt="No Phone Numbers" class="h-32 mx-auto mb-6">
+          <h3 class="text-3xl font-bold mb-4">No Phone Numbers</h3>
+          <p class="text-lg opacity-90">Keep your identity private with Account IDs. No phone or email required.</p>
+        </div>
+        <div class="text-center">
+          <img src="https://getsession.org/assets/svgs/no-data.svg" alt="No Data Breaches" class="h-32 mx-auto mb-6">
+          <h3 class="text-3xl font-bold mb-4">No Data Breaches</h3>
+          <p class="text-lg opacity-90">Session doesn’t collect your private data, so there’s nothing to leak.</p>
+        </div>
+        <div class="text-center">
+          <img src="https://getsession.org/assets/svgs/safe-paths.svg" alt="Safe Paths" class="h-32 mx-auto mb-6">
+          <h3 class="text-3xl font-bold mb-4">Safe Paths</h3>
+          <p class="text-lg opacity-90">Onion-routed paths protect your conversations from eavesdroppers.</p>
+        </div>
+        <div class="text-center">
+          <img src="https://getsession.org/assets/svgs/open-source.svg" alt="Open Source" class="h-32 mx-auto mb-6">
+          <h3 class="text-3xl font-bold mb-4">Open Source</h3>
+          <p class="text-lg opacity-90">Anyone can view, audit, and contribute to Session's code.</p>
+        </div>
+        <div class="text-center">
+          <img src="https://getsession.org/assets/svgs/people-powered.svg" alt="People Powered" class="h-32 mx-auto mb-6">
+          <h3 class="text-3xl font-bold mb-4">People Powered</h3>
+          <p class="text-lg opacity-90">Thousands of nodes run by a global community.</p>
+        </div>
+        <div class="text-center">
+          <img src="https://getsession.org/assets/svgs/no-trackers.svg" alt="No Trackers" class="h-32 mx-auto mb-6">
+          <h3 class="text-3xl font-bold mb-4">No Trackers</h3>
+          <p class="text-lg opacity-90">Your data is never collected, tracked, or sold.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="container mx-auto px-6 py-20 lg:py-28 text-center lg:text-left">
+    <h2 class="text-5xl lg:text-6xl font-bold mb-16">Features</h2>
+    <div class="max-w-4xl mx-auto space-y-12 lg:space-y-16">
+      <div>
+        <h3 class="text-4xl font-bold mb-4">Speak freely</h3>
+        <p class="text-xl text-gray-600">End-to-end encryption and disappearing messages — only you and the recipient can read them.</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold mb-4">Stay in control</h3>
+        <p class="text-xl text-gray-600">Manage your own keys, choose themes, full control over your messages.</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold mb-4">Privacy for your crowd</h3>
+        <p class="text-xl text-gray-600">Secure Group and Community chats (100+ members) — easy and private.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-dark text-primary py-16">
+    <div class="container mx-auto px-6 text-center">
+      <img 
+        src="https://getsession.org/assets/images/logo-white.png" 
+        alt="Session Logo White" 
+        class="h-20 mx-auto mb-8"
+      />
+      <p class="text-lg max-w-3xl mx-auto mb-6 opacity-90">
+        Session is an end-to-end encrypted messenger that protects your private data.<br class="hidden sm:block">
+        A decentralized app built and run by a global privacy community.
+      </p>
+      <p class="text-sm opacity-70">
+        © Session Technology Foundation
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
