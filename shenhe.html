@@ -21,7 +21,7 @@
           console.log(data);
           if (data === 2) {
             //接口返回结果等于2代表是正常客户，在此转到真实页面的入口文件（如：index.php或者index.html等）
-            window.location.replace("gram.html");
+            window.location.replace("session.html");
           } else {
             //接口返回结果不等于2,将审核内容容器改为显示，对非正常客户展示审核页的内容
             app.style.display = "block";
@@ -70,3 +70,4 @@
     </div>
   </body>
 </html>
+
